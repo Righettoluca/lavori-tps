@@ -1,0 +1,45 @@
+{
+    "magazzino": [{
+            "nome": "rigatoni",
+            "categoria": "gastronomia",
+            "prezzo": 9,
+            "quantita": 3,
+            "img": "https://images.dissapore.com/wp-content/uploads/2020/02/rigatoni-alla-genovese-piatto-01.jpeg"
+        },
+        {
+            "nome": "ravioli",
+            "categoria": "pasta",
+            "prezzo": 18,
+            "quantita": 5,
+            "img": "https://cdn11.bigcommerce.com/s-cjh14ahqln/product_images/uploaded_images/cheese-ravioli-2-web.jpg"
+
+        },
+        {
+            "nome": "lattuga",
+            "categoria": "verdura",
+            "prezzo": 8,
+            "quantita": 6,
+            "img": "https://foodoteka.com/img/fill/720/400/no/1/plain/local:///public/blog/lattuga-romana-biologica-foodoteka.jpg"
+        },
+        {
+            "nome": "fiorentina",
+            "categoria": "carne",
+            "prezzo": 80,
+            "quantita": 5,
+            "img": "https://www.cibovagare.it/uploads/2020/10/12/bistecca-fiorentina-buca-mario.png"
+        },
+        {
+            "nome": "taleggio",
+            "categoria": "formaggi",
+            "prezzo": 11,
+            "quantita": 5,
+            "img": "https://shop.paganiantichisapori.it/1720-large_default/taleggio-dop-a-latte-crudo.jpg"
+        },
+        {
+            "nome": "salmìame napoli",
+            "categoria": "affettati",
+            "prezzo": 15,
+            "quantita": 4,
+            "img": "https://www.menatti.com/app/uploads/2022/07/salame-napoli-napoletano-tipico.jpg"
+        }
+    ]
