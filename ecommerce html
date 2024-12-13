@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazzino Prodotti</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .product-list, .product-detail {
+            display: none;
+        }
+        .product-card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            text-align: center;
+            width: 200px;
+            cursor: pointer;
+        }
+        .product-card img {
+            width: 100%;
+            height: auto;
+        }
+        .product-card h3 {
+            font-size: 18px;
+        }
+        .product-detail img {
+            width: 100%;
+            height: auto;
+        }
+        .back-button {
+            margin: 20px 0;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Magazzino Prodotti</h1>
+    
+    <div class="product-list" id="productList"></div>
+    
+    <div class="product-detail" id="productDetail">
+        <a class="back-button" id="backButton">Torna alla lista</a>
+        <img id="productImage" src="" alt="">
+        <h1 id="productName"></h1>
+        <p id="productCategory"></p>
+        <p id="productPrice"></p>
+        <p id="productQuantity"></p>
+        <p id="productDescription"></p>
+    </div>
+
+    <script>
+        let prodotti = [];
+        
+        // Carica i prodotti dal file JSON
+        fetch('magazzino.json')
+            .then(response => response.json())
+            .then(data => {
+                prodotti = data.prodotti;
+                mostraProdotti();
+            })
+            .catch(error => console.error('Errore nel caricamento dei prodotti:', error));
+
+        const productList = document.getElementById('productList');
+        const productDetail = document.getElementById('productDetail');
+        const backButton = document.getElementById('backButton');
+
+        const mostraProdotti = () => {
+            productList.innerHTML = '';
+            productList.style.display = 'block';
+            productDetail.style.display = 'none';
+
+            prodotti.forEach((prodotto, index) => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                productCard.innerHTML = `
+                    <img src="${prodotto.img}" alt="${prodotto.nome}">
+                    <h3>${prodotto.nome}</h3>
+                    <p>Categoria: ${prodotto.categoria}</p>
+                    <p>Prezzo: €${prodotto.prezzo}</p>
+                `;
+                productCard.onclick = () => mostraDettaglio(index);
+                productList.appendChild(productCard);
+            });
+        };
+
+        const mostraDettaglio = (index) => {
+            const prodotto = prodotti[index];
+            document.getElementById('productImage').src = prodotto.img;
+            document.getElementById('productName').textContent = prodotto.nome;
+            document.getElementById('productCategory').textContent = Categoria: ${prodotto.categoria};
+            document.getElementById('productPrice').textContent = Prezzo: €${prodotto.prezzo};
+            document.getElementById('productQuantity').textContent = Quantità disponibile: ${prodotto.quantita};
+            document.getElementById('productDescription').textContent = prodotto.descrizione;
+
+            productList.style.display = 'none';
+            productDetail.style.display = 'block';
+        };
+
+        backButton.onclick = mostraProdotti;
+    </script>
+</body>
+</html>
