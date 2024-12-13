@@ -1,0 +1,52 @@
+{
+    "prodotti": [
+        {
+            "nome": "pesce",
+            "categoria": "pescheria",
+            "prezzo": 30,
+            "quantita": 3,
+            "img": "https://www.chioggiapesca.it/wp-content/uploads/2013/09/pesce-serra.jpg",
+            "descrizione": "Pesce fresco di alta qualità, perfetto per piatti di mare."
+        },
+        {
+            "nome": "carne",
+            "categoria": "macelleria",
+            "prezzo": 27,
+            "quantita": 5,
+            "img": "https://www.epsupercarni.it/wp-content/uploads/2023/03/carne-confezionata.jpg",
+            "descrizione": "Carne selezionata, ideale per arrosti e grigliate."
+        },
+        {
+            "nome": "arance",
+            "categoria": "frutta",
+            "prezzo": 6,
+            "quantita": 12,
+            "img": "https://www.fruitbookmagazine.it/wp-content/uploads/2022/02/Arance-rosse-Migross-Vr-15.02.2022-copy-Fm.jpg",
+            "descrizione": "Arance dolci e succose, perfette per spremute."
+        },
+        {
+            "nome": "patatine",
+            "categoria": "salatini",
+            "prezzo": 16,
+            "quantita": 5,
+            "img": "https://ilfattoalimentare.it/wp-content/uploads/2020/05/patatine-aromatizzate-insieme.png",
+            "descrizione": "Patatine croccanti, ideali per feste e aperitivi."
+        },
+        {
+            "nome": "rigatoni",
+            "categoria": "pasta",
+            "prezzo": 12,
+            "quantita": 4,
+            "img": "https://www.dececco.com/wp-content/uploads/2019/09/QSX0024-RIGATONI-3.png",
+            "descrizione": "Rigatoni di grano duro, perfetti con sughi ricchi."
+        },
+        {
+            "nome": "baguette",
+            "categoria": "pane",
+            "prezzo": 10,
+            "quantita": 30,
+            "img": "https://media-assets.lacucinaitaliana.it/photos/61fb121c207106e34c3d0989/16:9/w_2560%2Cc_limit/baguette-iper.jpg",
+            "descrizione": "Baguette fresca, croccante fuori e morbida dentro."
+        }
+    ]
+}
